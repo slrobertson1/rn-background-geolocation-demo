@@ -31,6 +31,21 @@ Now run it:
 
 The quickest way to see the plugin in-action is to boot the **iOS** simulator and *simulate location* with *Freeway Drive*.
 
+To build a debug relase on Android:
+
+```
+#React-Native >=0.59
+
+$ react-native bundle --dev false --platform android --entry-file index.js --bundle-output ./android/app/src/main/assets/index.android.bundle --assets-dest ./android/app/src/main/res
+
+$ cd android
+#Create debug build:
+$ ./gradlew assembleDebug
+#Create release build:
+$ ./gradlew assembleRelease
+#Generated `apk` will be located at `android/app/build/outputs/apk`
+```
+
 The demo is composed of three separate and independent sub-applications:
 
 - [Hello World](./src/hello-world/HelloWorld.js)
