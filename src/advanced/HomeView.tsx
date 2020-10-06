@@ -271,6 +271,7 @@ export default class HomeView extends Component<IProps, IState> {
       debug: true,
       logLevel: BackgroundGeolocation.LOG_LEVEL_VERBOSE,
       autoSync: true,
+      autoSyncThreshold: 5,
       stopOnTerminate: false,
       startOnBoot: true,
       enableHeadless: true,
